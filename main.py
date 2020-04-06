@@ -35,7 +35,7 @@ def check_last_message():
 #Enviar mensaje por telegram
 def send_message(message):
     message = urllib.parse.quote(message)
-    with urlopen("https://api.telegram.org/bot"+config.BOT_ID+"/sendMessage?CHAT_ID="+config.CHAT_ID+"&text="+message) as conn:
+    with urlopen("https://api.telegram.org/bot"+config.BOT_ID+"/sendMessage?chat_id="+config.CHAT_ID+"&text="+message) as conn:
         print('Mensaje enviado')
 
 #Comprobar si no ha funcionado internet para mostrarlo ahora a través del fichero
